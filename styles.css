@@ -1,0 +1,115 @@
+:root {
+    --mainText: #f2f2f2;
+    --subText: ;
+    --mainContainer: #333;
+    --subContainer: ;
+    --onHovText: black;
+    --onHovContainer: #ddd;
+    --activeContainer: #04aa6d;
+    --mainBackground: #7e7d7d;
+
+    --mainFontSize: 20px;
+    --bodyFontSize: 17px;
+
+    background-color: var(--mainBackground);
+}
+
+* { /* Pulls containers to edge */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ------- Navagation Bar ------- */
+.navBar { /* NavBar container */
+    background-color: var(--mainContainer);
+    overflow: hidden;
+}
+
+.navBar a { /* Links in NavBar */
+    float: left;
+    color: var(--mainText);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: var(--mainFontSize);
+}
+
+.navBar a:hover { /* On link hover */
+    background-color: var(--onHovContainer);
+    color: var(--onHovText);
+}
+
+.navBar a.active { /* Mark active tab */
+    background-color: var(--activeContainer);
+    color: var(--mainText);
+}
+/* ------- /Navagation Bar ------- */
+
+/* ------- Footer ------- */
+.footerMain { /* Footer container */
+    background-color: var(--mainContainer);
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.footerMain hr {
+    border: 2px solid;
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-color: var(--mainBackground);
+    border-radius: 7px;
+}
+
+.footerMain nav { /* Footer Navagation Bar  */
+    text-align: center;
+}
+
+.footerMain nav a { /* Footer Navagation Bar Links */
+    color: var(--mainText);
+    text-decoration: none;
+    font-size: var(--mainFontSize);
+    padding: 14px 16px;
+}
+
+.footerMain nav a:hover { /* On link hover */
+    text-decoration: underline;
+}
+
+.social { /* Social Media Icon container */
+    text-align: center;
+}
+
+.social a { /* Social Media Icons and links */
+    padding: 14px 16px;
+    font-size: 30px;
+    margin: auto;
+    color: var(--mainText);
+}
+
+.social a:hover { /* Social Media onHover */
+    color: var(--mainText);
+    color: var(--onHovText);
+    cursor: pointer;
+}
+
+.footerMain p {
+    text-align: center;
+    color: var(--mainText);
+    font-size: var(--bodyFontSize);
+}
+
+.footerMain p a {
+    color: var(--mainText);
+}
+
+.footerMain p a:hover {
+    color: var(--mainText);
+    color: var(--onHovText);
+}
+/* ------- /Footer ------- */
