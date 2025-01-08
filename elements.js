@@ -26,11 +26,11 @@ class Footer extends HTMLElement {
                     <a href="#about">About</a>
                 </nav>
                 <div class="social">
-                    <a href-'' class="fa fa-facebook"></a>
-                    <a href-'' class="fa fa-twitter"></a>
-                    <a href-'' class="fa fa-linkedin"></a>
-                    <a href-'' class="fa fa-instagram"></a>
-                    <a href-'' class="fa fa-youtube"></a>
+                    <a href='https://www.facebook.com/' target="_blank" class="fa fa-facebook"></a>
+                    <a href='https://www.x.com/' target="_blank" class="fa-brands fa-x-twitter"></a>
+                    <a href='https://www.linkedin.com/' target="_blank" class="fa-brands fa-linkedin"></a>
+                    <a href='https://www.instagram.com/' target="_blank" class="fa fa-instagram"></a>
+                    <a href='https://www.youtube.com/' target="_blank" class="fa fa-youtube"></a>
                 </div>
                 <p>2024 | Designed by <a href=''>ForgeFace</a></p>
             </footer>

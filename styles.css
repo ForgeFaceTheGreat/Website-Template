@@ -24,15 +24,24 @@
 .navBar { /* NavBar container */
     background-color: var(--mainContainer);
     overflow: hidden;
+    text-align: right;
+    /* float: right;
+    width: 100%; */
 }
 
+
 .navBar a { /* Links in NavBar */
-    float: left;
+    /* float: left; */
+    display: inline-block;
     color: var(--mainText);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: var(--mainFontSize);
+}
+
+.navBar .logo {
+    float: left;
 }
 
 .navBar a:hover { /* On link hover */
@@ -44,6 +53,27 @@
     background-color: var(--activeContainer);
     color: var(--mainText);
 }
+
+/* Responsive Navagation Bar */
+@media screen and (max-width: 600px) {
+    .navBar { /* NavBar container */
+        /* background-color: var(--mainContainer);
+        overflow: hidden;
+        text-align: right; */
+        
+    }
+    
+    .navBar a { /* Links in NavBar */
+        /* display: inline-block;
+        color: var(--mainText);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: var(--mainFontSize); */
+        display: none;
+    }
+}
+
 /* ------- /Navagation Bar ------- */
 
 /* ------- Footer ------- */
@@ -90,6 +120,7 @@
     font-size: 30px;
     margin: auto;
     color: var(--mainText);
+    text-decoration: none;
 }
 
 .social a:hover { /* Social Media onHover */
