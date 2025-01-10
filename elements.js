@@ -3,11 +3,25 @@ class NavBar extends HTMLElement {
     connectedCallback() {
         this.innerHTML =`
             <nav class="navBar">
-                <a class="active" href="#home">Home</a>
-                <a href="#news">News</a>
-                <a href="#contact">Contact</a>
-                <a href="#about">About</a>
-            </nav>
+            <div class="brand-title"> Logo
+                <!-- <a class="logo" href="#home">Logo</a> -->
+            </div>
+
+            <a href="#" class="burger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+
+            <div class="links">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+        </nav>
         `
     }
 }

@@ -4,49 +4,60 @@
     --mainContainer: #333;
     --subContainer: ;
     --onHovText: black;
-    --onHovContainer: #ddd;
+    --onHovContainer: #504e4e;
     --activeContainer: #04aa6d;
     --mainBackground: #7e7d7d;
 
-    --mainFontSize: 20px;
-    --bodyFontSize: 17px;
+    --logoSize: 1.5rem;
 
     background-color: var(--mainBackground);
 }
 
 * { /* Pulls containers to edge */
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
 }
 
 /* ------- Navagation Bar ------- */
 .navBar { /* NavBar container */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--mainContainer);
-    overflow: hidden;
-    text-align: right;
-    /* float: right;
-    width: 100%; */
-}
-
-
-.navBar a { /* Links in NavBar */
-    /* float: left; */
-    display: inline-block;
     color: var(--mainText);
-    text-align: center;
-    padding: 14px 16px;
+}
+
+.brand-title {
+    font-size: var(--logoSize);
+    margin: 0.5rem;
     text-decoration: none;
-    font-size: var(--mainFontSize);
+    color: var(--mainText);
 }
 
-.navBar .logo {
-    float: left;
+.links ul { /* Links in NavBar */
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
-.navBar a:hover { /* On link hover */
+.links li {
+    list-style: none;
+}
+
+.links li a {
+    text-decoration: none;
+    color: var(--mainText);
+    padding: 1rem;
+    display: block;
+}
+
+.links a:hover { /* On link hover */
     background-color: var(--onHovContainer);
-    color: var(--onHovText);
+    /* color: var(--onHovText); */
 }
 
 .navBar a.active { /* Mark active tab */
@@ -54,23 +65,56 @@
     color: var(--mainText);
 }
 
+.burger {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.burger .bar {
+    height: 3px;
+    width: 100%;
+    background-color: var(--mainText);
+    border-radius: 10px;
+}
+
 /* Responsive Navagation Bar */
 @media screen and (max-width: 600px) {
-    .navBar { /* NavBar container */
-        /* background-color: var(--mainContainer);
-        overflow: hidden;
-        text-align: right; */
-        
+    .burger { /* Burger Menu */
+        display: flex;
     }
     
-    .navBar a { /* Links in NavBar */
-        /* display: inline-block;
-        color: var(--mainText);
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: var(--mainFontSize); */
+    .links { /* Links in NavBar */
         display: none;
+        width: 100%;
+    }
+
+    .navBar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .links li {
+        text-align: center;
+    }
+
+    .links li a {
+        padding: 0.5rem 1rem;
+    }
+
+
+    .links.active {
+        display: flex;
     }
 }
 
@@ -103,7 +147,6 @@
 .footerMain nav a { /* Footer Navagation Bar Links */
     color: var(--mainText);
     text-decoration: none;
-    font-size: var(--mainFontSize);
     padding: 14px 16px;
 }
 
@@ -117,14 +160,13 @@
 
 .social a { /* Social Media Icons and links */
     padding: 14px 16px;
-    font-size: 30px;
+    font-size: var(--logoSize);
     margin: auto;
     color: var(--mainText);
     text-decoration: none;
 }
 
 .social a:hover { /* Social Media onHover */
-    color: var(--mainText);
     color: var(--onHovText);
     cursor: pointer;
 }
@@ -132,7 +174,6 @@
 .footerMain p {
     text-align: center;
     color: var(--mainText);
-    font-size: var(--bodyFontSize);
 }
 
 .footerMain p a {
@@ -140,7 +181,6 @@
 }
 
 .footerMain p a:hover {
-    color: var(--mainText);
     color: var(--onHovText);
 }
 /* ------- /Footer ------- */
