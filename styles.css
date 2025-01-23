@@ -25,10 +25,14 @@ body {
 /* ------- Navagation Bar ------- */
 .navBar { /* NavBar container */
     display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     background-color: var(--mainContainer);
     color: var(--mainText);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .brand-title {
@@ -124,10 +128,11 @@ body {
 .footerMain { /* Footer container */
     background-color: var(--mainContainer);
     overflow: hidden;
-    position: fixed;
     left: 0;
     bottom: 0;
+    /* position: absolute; */
     width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 address {

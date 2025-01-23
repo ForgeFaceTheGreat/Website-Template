@@ -59,7 +59,7 @@ class Footer extends HTMLElement {
                     <a href='https://www.instagram.com/' target="_blank" class="fa fa-instagram"></a>
                     <a href='https://www.youtube.com/' target="_blank" class="fa fa-youtube"></a>
                 </div>
-                <p>2024 | Designed by <a href='https://github.com/ForgeFaceTheGreat' target="_blank">ForgeFace</a></p>
+                <p>2025 | Designed by <a href='https://github.com/ForgeFaceTheGreat' target="_blank">ForgeFace</a></p>
             </footer>
         `
     }
