@@ -4,6 +4,9 @@ var email = "example@email.com";
 var phone = "(123)456-7890";
 var address = "123 Example Rd. Focity, JK 00000";
 
+let fullDate = new Date();
+let year = fullDate.getFullYear();
+
 // Navigation Bar
 class NavBar extends HTMLElement {
     connectedCallback() {
@@ -59,7 +62,7 @@ class Footer extends HTMLElement {
                     <a href='https://www.instagram.com/' target="_blank" class="fa fa-instagram"></a>
                     <a href='https://www.youtube.com/' target="_blank" class="fa fa-youtube"></a>
                 </div>
-                <p>2025 | Designed by <a href='https://github.com/ForgeFaceTheGreat' target="_blank">ForgeFace</a></p>
+                <p>Copyright &copy; ` + year + ` | Designed by <a href='https://github.com/ForgeFaceTheGreat' target="_blank">ForgeFace</a></p>
             </footer>
         `
     }
