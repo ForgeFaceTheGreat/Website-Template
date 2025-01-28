@@ -15,9 +15,9 @@ class NavBar extends HTMLElement {
             <div class="brand-title">Template Website</div>
 
             <a href="#" class="burger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
             </a>
 
             <div class="links">

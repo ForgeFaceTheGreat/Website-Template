@@ -71,7 +71,7 @@ body {
     /* color: var(--onHovText); */
 }
 
-.navBar a.active { /* Mark active tab */
+.navBar a:target { /* Mark active tab */
     background-color: var(--activeContainer);
     color: var(--mainText);
 }
@@ -87,12 +87,28 @@ body {
     height: 21px;
 }
 
-.burger .bar {
+.bar1, .bar2, .bar3 { /* Burger Bars */
     height: 3px;
     width: 100%;
     background-color: var(--mainText);
     border-radius: 10px;
+    position: absolute;
+    transform: rotate(0);
+    transition: all 200ms cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    
 }
+
+span.bar1 {
+    top: 0px;
+}
+
+span.bar2 {
+    top: 10px;
+}
+ 
+span.bar3 {
+    top: 20px;
+} 
 
 /* Responsive Navagation Bar */
 @media screen and (max-width: 600px) {
@@ -123,9 +139,21 @@ body {
         padding: 0.5rem 1rem;
     }
 
-
-    .links.active {
+    .links.open {
         display: flex;
+    }
+
+    .clicked .bar1 {
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    .clicked .bar2 {
+        rotate: 720deg;
+        opacity: 0;
+    }
+
+    .clicked .bar3 {
+        transform: translateY(-10px) rotate(-45deg);
     }
 }
 
